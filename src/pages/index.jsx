@@ -43,7 +43,6 @@ const IndexPage = () => {
             <h1>Join our newsletter</h1>
             <p>
               Note: I will never share your email or spam you with nonsense.
-              Because I’m not a dick.
             </p>
           </div>
         </Box>

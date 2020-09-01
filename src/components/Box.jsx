@@ -25,6 +25,8 @@ const StyledBox = styled.div`
   height: 415px;
   display: block;
   overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const StyledLink = styled(Link)`
