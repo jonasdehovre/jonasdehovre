@@ -9,9 +9,17 @@ import Box from '../components/Box';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "background.jpg" }) {
+      desktopImage: file(relativePath: { eq: "bg-desktop.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
+          fluid(maxWidth: 1600, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+      mobileImage: file(relativePath: { eq: "bg-mobile.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800, quality: 100) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -26,8 +34,18 @@ const IndexPage = () => {
       <Container>
         <p>Subscribe and stay up to date!</p>
         <Button to="/courses">test</Button>
-        <Box image={data.file.childImageSharp.fluid} alt="test">
-          <p>test</p>
+        <Box
+          imageDesktop={data.desktopImage.childImageSharp.fluid}
+          imageMobile={data.mobileImage.childImageSharp.fluid}
+          alt="test"
+        >
+          <div>
+            <h1>Join our newsletter</h1>
+            <p>
+              Note: I will never share your email or spam you with nonsense.
+              Because I’m not a dick.
+            </p>
+          </div>
         </Box>
       </Container>
     </Layout>

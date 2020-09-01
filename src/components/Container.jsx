@@ -11,9 +11,9 @@ const StyledContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     width: 90vw;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     & > * {
       padding-left: 0px;

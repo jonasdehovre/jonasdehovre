@@ -55,7 +55,7 @@ const StyledLogo = styled.div`
 
 const FooterUl = styled.ul`
   padding: 0;
-  @media (min-width: 1200px) {
+  @media (min-width: 1600px) {
     display: flex;
     flex-direction: row;
     align-items: center;
