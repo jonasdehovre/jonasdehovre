@@ -1,24 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = ({ children }) => (
-  <StyledContainer>{children}</StyledContainer>
+const Container = ({ children, variant = 'light', className }) => (
+  <StyledWrapper className={className} variant={variant}>
+    <StyledContainer>{children}</StyledContainer>
+  </StyledWrapper>
 );
 
-const StyledContainer = styled.div`
-  position: relative;
+const StyledWrapper = styled.div`
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  ${(props) =>
+    props.variant === 'dark' &&
+    `background: var(--dark);
+    `}
+`;
 
+const StyledContainer = styled.div`
+  max-width: 90vw;
+  margin: 0 auto;
   @media (min-width: 1600px) {
-    width: 90vw;
+    width: 1600px;
     max-width: 1600px;
-    margin: 0 auto;
-    & > * {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
   }
 `;
 

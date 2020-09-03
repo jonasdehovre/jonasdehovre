@@ -7,7 +7,7 @@ import Logo from './Logo';
 const footerItems = [
   {
     name: 'Client work',
-    link: 'http://58north.nl/contact',
+    link: 'http://58north.nl',
   },
 ];
 
@@ -41,7 +41,7 @@ const StyledFooter = styled.footer`
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  & > * {
+  & > * > * {
     display: flex;
     justify-content: space-between;
   }

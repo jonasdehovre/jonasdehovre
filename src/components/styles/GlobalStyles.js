@@ -25,13 +25,20 @@ const GlobalStyles = createGlobalStyle`
     color: var(--darkGray);
     height: 100%;
   }
-  main {display: flex;}
+  main {
+    display: flex;
+    flex-direction: column
+  }
   body {
     font-size: 1.5rem;
     min-height: 100%;
   }
   h1,h2,h3,h4,h5,h6 {
     font-family: 'Helvetica-Bold';
+    letter-spacing: -1px;
+  }
+  h4{
+    font-family: 'Helvetica-Medium';
   }
   h5{
     font-size: 20px;
@@ -45,7 +52,7 @@ const GlobalStyles = createGlobalStyle`
       font-size: 40px;
     }
   }
-  a, li, p {
+  a, li, p, span {
     font-family: 'Helvetica-Thin';
     text-decoration: none;
     letter-spacing: -1px;
@@ -56,7 +63,18 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
-
+  input{
+    border-radius: 16px;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-family: 'Helvetica-Regular';
+    resize: vertical;
+    ::placeholder {
+      color: var(--n30);
+      opacity: 1; /* Firefox */
+    }
+  }
 `;
 
 export default GlobalStyles;

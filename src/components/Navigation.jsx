@@ -8,8 +8,8 @@ import HamburgerIcon from '../assets/svg/hamburger_icon.svg';
 
 const navigationItems = [
   {
-    name: 'Courses',
-    link: '/courses',
+    name: 'Client work',
+    link: 'http://58north.nl',
   },
 ];
 
@@ -52,10 +52,10 @@ const StyledNavigation = styled.nav`
   width: 100%;
   height: 90px;
   background-color: var(--light);
-  & > * {
+  align-items: center;
+  & > * > * {
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 `;
 
@@ -97,7 +97,6 @@ const Nav = styled.ul`
 `;
 
 const NavLi = styled.li`
-  font-family: 'Helvetica-MediumItalic';
   a {
     color: var(--light);
   }
